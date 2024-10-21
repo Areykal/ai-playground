@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Areykal Ho - Full Stack Developer</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+        <style>
+            .section-fade {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            }
+
+            .section-fade.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .dark-mode {
+                background-color: #1a202c;
+                color: #f7fafc;
+            }
+
+        </style>
+    </head>
+
+    <body class="bg-gray-50">
+        <!-- Navigation -->
+        <nav class="fixed w-full bg-white shadow-md z-50">
+            <div class="container mx-auto px-6 py-3">
+                <div class="flex justify-between items-center">
+                    <a href="#" class="text-2xl font-bold text-cyan-600">AH</a>
+                    <div class="flex space-x-4">
+                        <button id="darkModeToggle" class="p-2 rounded-full hover:bg-gray-200">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                        <div class="hidden md:flex space-x-4">
+                            <a href="#about" class="hover:text-cyan-600">About</a>
+                            <a href="#experience" class="hover:text-cyan-600">Experience</a>
+                            <a href="#projects" class="hover:text-cyan-600">Projects</a>
+                            <a href="#contact" class="hover:text-cyan-600">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="hero" class="pt-24 pb-12 px-6">
+            <div class="container mx-auto text-center">
+                <img src="/api/placeholder/150/150" alt="Areykal Ho" class="rounded-full mx-auto mb-6">
+                <h1 class="text-4xl font-bold mb-4">Areykal Ho</h1>
+                <p class="text-xl text-gray-600 mb-8">Full Stack Developer</p>
+                <div class="flex justify-center space-x-4">
+                    <a href="https://linkedin.com/in/sarahchen" class="text-cyan-600 hover:text-cyan-700">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                    <a href="https://github.com/sarahchen-dev" class="text-cyan-600 hover:text-cyan-700">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-12 px-6 section-fade">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold mb-8 text-center">About Me</h2>
+                <div class="max-w-2xl mx-auto">
+                    <p class="text-lg mb-6">Passionate full-stack developer with 5 years of experience building scalable
+                        web applications. Specializing in React, Node.js, and cloud architecture.</p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">Education</h3>
+                            <p>BS Computer Science</p>
+                            <p>UC Berkeley, 2019</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">Location</h3>
+                            <p>San Francisco, CA</p>
+                            <p>Available for remote work</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-12 px-6 bg-gray-100 section-fade">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold mb-8 text-center">Skills</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-xl font-semibold mb-4">Frontend</h3>
+                        <ul class="space-y-2">
+                            <li>React</li>
+                            <li>Vue.js</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>HTML5/CSS3</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-xl font-semibold mb-4">Backend</h3>
+                        <ul class="space-y-2">
+                            <li>Node.js</li>
+                            <li>Express</li>
+                            <li>Python</li>
+                            <li>Django</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-xl font-semibold mb-4">Cloud & DevOps</h3>
+                        <ul class="space-y-2">
+                            <li>AWS</li>
+                            <li>Docker</li>
+                            <li>Kubernetes</li>
+                            <li>CI/CD</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-12 px-6 section-fade">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold mb-8 text-center">Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="bg-white rounded-lg shadow overflow-hidden">
+                        <img src="/api/placeholder/400/200" alt="EcoTrack" class="w-full">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">EcoTrack</h3>
+                            <p class="mb-4">A full-stack application for tracking and reducing carbon footprint.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-gray-200 rounded-full text-sm">React</span>
+                                <span class="px-3 py-1 bg-gray-200 rounded-full text-sm">Node.js</span>
+                                <span class="px-3 py-1 bg-gray-200 rounded-full text-sm">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow overflow-hidden">
+                        <img src="/api/placeholder/400/200" alt="DevMentor" class="w-full">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">DevMentor</h3>
+                            <p class="mb-4">AI-powered platform matching junior developers with mentors.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-gray-200 rounded-full text-sm">Vue.js</span>
+                                <span class="px-3 py-1 bg-gray-200 rounded-full text-sm">Python</span>
+                                <span class="px-3 py-1 bg-gray-200 rounded-full text-sm">Django</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-12 px-6 bg-gray-100 section-fade">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold mb-8 text-center">Contact Me</h2>
+                <div class="max-w-lg mx-auto">
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label class="block mb-2">Name</label>
+                            <input type="text" class="w-full p-2 border rounded" required>
+                        </div>
+                        <div>
+                            <label class="block mb-2">Email</label>
+                            <input type="email" class="w-full p-2 border rounded" required>
+                        </div>
+                        <div>
+                            <label class="block mb-2">Message</label>
+                            <textarea class="w-full p-2 border rounded h-32" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-cyan-600 text-white py-2 rounded hover:bg-cyan-700">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            // Dark mode toggle
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            darkModeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                const icon = darkModeToggle.querySelector('i');
+                icon.classList.toggle('fa-moon');
+                icon.classList.toggle('fa-sun');
+            });
+
+            // Smooth scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Section fade in
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.section-fade').forEach((section) => {
+                observer.observe(section);
+            });
+
+            // Contact form handling
+            document.getElementById('contactForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+                alert('Message sent! (Demo only)');
+                this.reset();
+            });
+        </script>
+    </body>
+
+</html>
